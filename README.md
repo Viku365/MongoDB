@@ -2,6 +2,8 @@
 
 Este repositorio es un tutorial completo sobre cómo realizar un análisis de datos meteorológicos usando Power BI Desktop. A partir de datos obtenidos de una API del clima y almacenados en Azure Cosmos DB, este tutorial te guiará en la creación de diferentes visualizaciones usando Power BI para explorar el comportamiento de distintas variables meteorológicas.
 
+[PDF clase](https://tajamar365.sharepoint.com/sites/3405-MasterIA2024-2025/Documentos%20compartidos/Forms/AllItems.aspx?id=%2Fsites%2F3405%2DMasterIA2024%2D2025%2FDocumentos%20compartidos%2F2%2E%20Big%20Data%2FCosmosDB%2DMongoDB%2FCosmosDB%2Epdf&parent=%2Fsites%2F3405%2DMasterIA2024%2D2025%2FDocumentos%20compartidos%2F2%2E%20Big%20Data%2FCosmosDB%2DMongoDB&p=true&ga=1)
+
 ## Paso 1: Crear el entorno de desarrollo
 
 Antes de comenzar a ejecutar el script de Python, es necesario crear un entorno virtual para gestionar las dependencias y asegurarse de que el código se ejecute correctamente sin conflictos con otras versiones de paquetes instalados.
@@ -63,6 +65,12 @@ Utilizaremos la API de OpenWeather para obtener datos meteorológicos. Asegúrte
 
 ### 2.2. Crear el script para extraer datos
 Utiliza el siguiente script de Python para extraer los datos meteorológicos y guardarlos en **Azure Cosmos DB**:
+
+Creamos en VCode un documento llamado **weather_to_cosmosdb.py** con el siguiente codigo:
+
+Este parametro **CONNECTION = "mongodb://<TU_CONEXION_A_COSMOS_DB>"  # Conexión a Cosmos DB** se obtiene en Azure, en tu CosmosDB , ve a Connection strings y copia PRIMARY CONNECTION 
+STRING: (esta guia esta en el documento pdf)
+
 
 ```python
 from pymongo import MongoClient
