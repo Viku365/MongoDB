@@ -121,10 +121,10 @@ Este script se conecta a la API de OpenWeather para obtener datos de la ciudad d
 En **Azure Databricks**, configura tu clúster de Spark con las siguientes configuraciones:
 
 ```properties
-spark.master=local[*]
-spark.databricks.cluster.profile=singleNode
-spark.mongodb.output.uri=mongodb://<TU_CONEXION_A_COSMOS_DB>
-spark.mongodb.input.uri=mongodb://<TU_CONEXION_A_COSMOS_DB>
+spark.master local[*, 4]
+spark.databricks.cluster.profile singleNode
+spark.mongodb.output.uri mongodb://<TU_CONEXION_A_COSMOS_DB>
+spark.mongodb.input.uri mongodb://<TU_CONEXION_A_COSMOS_DB>
 ```
 
 Asegúrate de reemplazar `<TU_CONEXION_A_COSMOS_DB>` con la conexión correspondiente a tu Cosmos DB.
